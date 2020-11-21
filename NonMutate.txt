@@ -1,0 +1,147 @@
+
+The total profit : 11.0217
+1th Channel ----->>> 2.86033
+2th Channel ----->>> 48.8382
+3th Channel ----->>> 9.48039
+4th Channel ----->>> 38.8061
+
+
+The total profit : 10.7656
+1th Channel ----->>> 22.7833
+2th Channel ----->>> 56.2971
+3th Channel ----->>> 2.79964
+4th Channel ----->>> 18.1024
+
+
+The total profit : 10.8348
+1th Channel ----->>> 4.15309
+2th Channel ----->>> 65.7285
+3th Channel ----->>> 16.9261
+4th Channel ----->>> 13.0024
+
+
+The total profit : 11.5173
+1th Channel ----->>> 4.01976
+2th Channel ----->>> 71.64
+3th Channel ----->>> 0.182497
+4th Channel ----->>> 23.5105
+
+
+The total profit : 10.9074
+1th Channel ----->>> 22.8609
+2th Channel ----->>> 65.3599
+3th Channel ----->>> 1.1268
+4th Channel ----->>> 10.5136
+
+
+The total profit : 10.2058
+1th Channel ----->>> 41.5165
+2th Channel ----->>> 47.6713
+3th Channel ----->>> 0.435344
+4th Channel ----->>> 10.3044
+
+
+The total profit : 11.5746
+1th Channel ----->>> 2.92277
+2th Channel ----->>> 82.1521
+3th Channel ----->>> 0.533146
+4th Channel ----->>> 13.1386
+
+
+The total profit : 11.1106
+1th Channel ----->>> 13.9517
+2th Channel ----->>> 64.9054
+3th Channel ----->>> 2.17403
+4th Channel ----->>> 18.6694
+
+
+The total profit : 10.8715
+1th Channel ----->>> 23.4533
+2th Channel ----->>> 63.7263
+3th Channel ----->>> 1.51447
+4th Channel ----->>> 11.2919
+
+
+The total profit : 10.618
+1th Channel ----->>> 14.4091
+2th Channel ----->>> 62.5525
+3th Channel ----->>> 12.2498
+4th Channel ----->>> 10.0137
+
+
+The total profit : 10.8913
+1th Channel ----->>> 23.6153
+2th Channel ----->>> 65.2378
+3th Channel ----->>> 0.947612
+4th Channel ----->>> 10.0653
+
+
+The total profit : 11.7487
+1th Channel ----->>> 3.1658
+2th Channel ----->>> 85.2977
+3th Channel ----->>> 0.124031
+4th Channel ----->>> 11.3726
+
+
+The total profit : 10.7072
+1th Channel ----->>> 24.736
+2th Channel ----->>> 59.4594
+3th Channel ----->>> 0.171482
+4th Channel ----->>> 14.3741
+
+
+The total profit : 10.7207
+1th Channel ----->>> 26.2042
+2th Channel ----->>> 61.5667
+3th Channel ----->>> 1.88043
+4th Channel ----->>> 10.0428
+
+
+The total profit : 10.5045
+1th Channel ----->>> 30.5162
+2th Channel ----->>> 56.4987
+3th Channel ----->>> 1.59787
+4th Channel ----->>> 10.6501
+
+
+The total profit : 10.3021
+1th Channel ----->>> 10.9308
+2th Channel ----->>> 24.1803
+3th Channel ----->>> 6.3036
+4th Channel ----->>> 55.3158
+
+
+The total profit : 10.8851
+1th Channel ----->>> 5.01043
+2th Channel ----->>> 68.2684
+3th Channel ----->>> 12.0657
+4th Channel ----->>> 13.1587
+
+
+The total profit : 10.9633
+1th Channel ----->>> 19.0772
+2th Channel ----->>> 68.0067
+3th Channel ----->>> 2.12154
+4th Channel ----->>> 10.2527
+
+
+The total profit : 11.0927
+1th Channel ----->>> 11.5046
+2th Channel ----->>> 66.5661
+3th Channel ----->>> 3.51214
+4th Channel ----->>> 17.6232
+
+
+The total profit : 10.4335
+1th Channel ----->>> 26.3899
+2th Channel ----->>> 55.8596
+3th Channel ----->>> 6.09716
+4th Channel ----->>> 10.84
+
+------------------------------------------------------------------
+Best Total Profit : 11.7487
+1th Channel ----->>> 3.1658
+2th Channel ----->>> 85.2977
+3th Channel ----->>> 0.124031
+4th Channel ----->>> 11.3726
+
