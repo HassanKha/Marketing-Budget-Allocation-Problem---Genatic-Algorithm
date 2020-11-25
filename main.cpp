@@ -221,6 +221,24 @@ cout <<endl;
     {
         return MaxofGeneration;
     }
+    int bestChromosomeindex(vector<double>ROI)
+    {
+        Chromosome chromosomeFitt;
+        chromosomeFitt.setChromosome(chromosome[0]);
+int in=0;
+        for(int i=0; i<chromosome.size(); ++i)
+        {
+
+            if(chromosomeFitt.getGenesFitt(ROI,chromosomeFitt.getGenes())<chromosome[i].getGenesFitt(ROI,chromosome[i].getGenes()))
+            {
+                chromosomeFitt.setChromosome(chromosome[i]);
+                in=i;
+            }
+
+        }
+        return in;
+
+    }
     Chromosome bestChromosome(vector<double>ROI)
     {
         Chromosome chromosomeFitt;
@@ -238,6 +256,7 @@ cout <<endl;
         return chromosomeFitt;
 
     }
+
     int worstChromosome(vector<double>ROI)
     {
         Chromosome chromosomeFitt;
@@ -273,6 +292,10 @@ cout <<endl;
     {
         return chromosome.size();
     }
+     void SetChromosomes(vector<Chromosome>V)
+    {
+       chromosome=V;
+    }
 
     Chromosome getChromosomeIndex(int n)
     {
@@ -300,7 +323,18 @@ chromosome[i]=c;
     {
         return current_generation;
     }
+   void RemoveChromo(int k){
+       vector<Chromosome>CC;
+       int x=0;
+   for(int i=0 ; i<chromosome.size(); i++){
+    if(i!=k){
+        CC.push_back(chromosome[i]);
 
+    }
+   }
+   SetChromosomes(CC);
+
+   }
 
 
 };
@@ -323,24 +357,37 @@ public:
         newGeneration.upgrade_genration(generation.getCurrentGeneration());
 
 
+    Generations DG=generation;
 
-
-        for (int i = 0; i < generation.GenerationSize(); i+=2)
+        for (int i = 0; i < generation.GenerationSize(); i++)
         {
+             pair<Chromosome,int> c1 = tournamentSelection(DG,ROI,generation,totalBudget, chaneelSizes,Range);
 
-            Chromosome c1 = tournamentSelection(generation,ROI,i,totalBudget, chaneelSizes,Range);
-            Chromosome c2 = tournamentSelection(generation,ROI,i+1,totalBudget, chaneelSizes,Range);
 
-           vector<Chromosome> newc = crossover(c1, c2,totalBudget);
 
-           newc[0].setConstrains(Range);
-           newc[1].setConstrains(Range);
+          c1.first.setConstrains(Range);
 
-            newGeneration.pushChromosome(newc[0]);
-            newGeneration.pushChromosome(newc[1]);
+            newGeneration.pushChromosome(c1.first);
+            DG.RemoveChromo(c1.second);
+
 
         }
 
+
+for (int i = 0; i < newGeneration.GenerationSize(); i+=2)
+        {
+
+
+
+             vector<Chromosome> newc = crossover(newGeneration.getChromosomeIndex(i), newGeneration.getChromosomeIndex(i+1),totalBudget);
+
+        newc[0].setConstrains(Range);
+           newc[1].setConstrains(Range);
+
+
+              newGeneration.setChromo(newc[0],i);
+                newGeneration.setChromo(newc[1],i+1);
+        }
 
 
         for (int i = 0; i < newGeneration.GenerationSize(); i++)
@@ -375,24 +422,27 @@ Chromosome F1= newGeneration.bestChromosome(ROI);
 return newGeneration;
 }
 
-    Chromosome tournamentSelection(Generations generation,vector<double>ROI,int index,double totalBudget,int chaneelSizes,vector<pair<double,double>>Range)
+    pair<Chromosome,int> tournamentSelection(Generations generation,vector<double>ROI,Generations generationn,double totalBudget,int chaneelSizes,vector<pair<double,double>>Range)
     {
 
         Generations Generationtournament(tournamentSize, false,totalBudget, chaneelSizes,Range);
 
 
-        for (int i = index; i < tournamentSize+index && i<generation.GenerationSize() ; i++)
+        for (int i = 0; i < tournamentSize; i++)
         {
 
+         int R=rand()%generation.GenerationSize();
 
-            Generationtournament.pushChromosome(generation.getChromosomeIndex(i));
+            Generationtournament.pushChromosome(generation.getChromosomeIndex(R));
 
         }
 
         Chromosome fittest = Generationtournament.bestChromosome(ROI);
-
-
-        return fittest;
+        int h=generation.bestChromosomeindex(ROI);
+pair<Chromosome,int>b;
+b.first=fittest;
+b.second=h;
+        return b;
     }
  vector<Chromosome> crossover(Chromosome c1, Chromosome c2,double totalBudget)
     {
